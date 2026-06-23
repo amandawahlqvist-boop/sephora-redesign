@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEPHORA UK</title>
+<title>SEPHORA — Edition</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -214,11 +214,19 @@
     overflow: hidden;
     border-bottom: 1px solid var(--line);
   }
-  .banner img {
+  .banner .banner-visual {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: grayscale(1) contrast(1.05) brightness(1.04);
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner .sun-mark {
+    width: 220px;
+    height: 220px;
+    stroke: var(--ink);
+    opacity: 0.5;
   }
   .banner .banner-copy {
     position: absolute;
@@ -501,11 +509,25 @@
   </nav>
 
   <div class="banner">
-    <img src="https://picsum.photos/seed/kbeauty-spf/1600/600" alt="K-Beauty SPF spotlight">
+    <div class="banner-visual">
+      <svg class="sun-mark" viewBox="0 0 100 100" fill="none" stroke-width="1.5" stroke-linecap="round">
+        <circle cx="50" cy="50" r="18"></circle>
+        <g>
+          <line x1="50" y1="8" x2="50" y2="18"></line>
+          <line x1="50" y1="82" x2="50" y2="92"></line>
+          <line x1="8" y1="50" x2="18" y2="50"></line>
+          <line x1="82" y1="50" x2="92" y2="50"></line>
+          <line x1="20.5" y1="20.5" x2="27.8" y2="27.8"></line>
+          <line x1="72.2" y1="72.2" x2="79.5" y2="79.5"></line>
+          <line x1="20.5" y1="79.5" x2="27.8" y2="72.2"></line>
+          <line x1="72.2" y1="27.8" x2="79.5" y2="20.5"></line>
+        </g>
+      </svg>
+    </div>
     <div class="banner-copy">
-      <div class="kicker">Brand Spotlight — K-Beauty</div>
+      <div class="kicker">Brand Spotlight — K-Beauty SPF</div>
       <h2>Beauty of Joseon, Relief Sun: Rice + Probiotics SPF 50+</h2>
-      <p>The K-beauty SPF that broke the internet — weightless, no white cast, skincare disguised as sunscreen.</p>
+      <p>The K-beauty sunscreen that broke the internet — weightless, no white cast, broad-spectrum protection that feels like skincare.</p>
     </div>
   </div>
 
@@ -551,7 +573,7 @@
       <div class="grid">
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/rhode-lip/480/480" alt="Rhode Peptide Lip Treatment"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Rhode</div>
             <div class="name">Peptide Lip Treatment</div>
@@ -561,7 +583,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/rhode-milk/480/480" alt="Rhode Glazing Milk"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Rhode</div>
             <div class="name">Glazing Milk</div>
@@ -571,7 +593,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/milk-stick/480/480" alt="Milk Makeup Hydro Grip"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Milk Makeup</div>
             <div class="name">Hydro Grip Primer Stick</div>
@@ -580,7 +602,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/milk-tint/480/480" alt="Milk Makeup Cooling Water Jelly Tint"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Milk Makeup</div>
             <div class="name">Cooling Water Jelly Tint</div>
@@ -590,7 +612,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/tower28-suncream/480/480" alt="Tower 28 SunnyDays SPF"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Tower 28</div>
             <div class="name">SunnyDays SPF 30 Serum</div>
@@ -600,7 +622,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/merit-blush/480/480" alt="Merit Beauty Flush Balm"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Merit</div>
             <div class="name">Flush Balm Cheek Colour</div>
@@ -610,7 +632,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/glowrecipe-dew/480/480" alt="Glow Recipe Watermelon Dew Drops"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Glow Recipe</div>
             <div class="name">Watermelon Dew Drops</div>
@@ -619,7 +641,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/westman-skin/480/480" alt="Westman Atelier Vital Skin Foundation"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Westman Atelier</div>
             <div class="name">Vital Skin Foundation Stick</div>
@@ -644,7 +666,7 @@
       <div class="grid">
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/rhode-cream/480/480" alt="Rhode Barrier Restore Cream"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Rhode</div>
             <div class="name">Barrier Restore Cream</div>
@@ -653,7 +675,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/halfmagic-serum/480/480" alt="Half Magic Bright Eyed Serum"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Half Magic</div>
             <div class="name">Bright Eyed Brightening Serum</div>
@@ -663,7 +685,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/saie-glow/480/480" alt="Saie Glowsicle Lip Oil"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">Saie</div>
             <div class="name">Glowsicle Lip Oil</div>
@@ -672,7 +694,7 @@
         </div>
 
         <div class="card">
-          <div class="swatch"><img src="https://picsum.photos/seed/laroche-baume/480/480" alt="La Roche-Posay Cicaplast Baume B5"></div>
+          <div class="swatch"></div>
           <div class="info">
             <div class="brand">La Roche-Posay</div>
             <div class="name">Cicaplast Baume B5</div>
